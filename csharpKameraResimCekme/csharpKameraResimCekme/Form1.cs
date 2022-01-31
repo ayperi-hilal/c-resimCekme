@@ -75,6 +75,37 @@ namespace csharpKameraResimCekme
             }
         }
 
-        
+        private void btn_ac_Click(object sender, EventArgs e)
+        {
+            cam = new VideoCaptureDevice(webcam[comboBox1.SelectedIndex].MonikerString);
+            cam.NewFrame += new NewFrameEventHandler(cam_NewFrame);
+            cam.Start();
+
+
+        }
+
+        private void btn_cek_Click(object sender, EventArgs e)
+        {
+            pictureBox2.Image = pictureBox1.Image;
+            Bitmap bmpkucuk = new Bitmap(pictureBox1.Image);
+        }
+
+        private void btn_ok_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog swf = new SaveFileDialog();
+            swf.Filter = "(*.jpg)|*.jpg";
+            DialogResult dialog = swf.ShowDialog();
+            if (dialog== DialogResult.OK)
+            {
+                pictureBox2.Image.Save(swf.FileName);
+            }
+
+            if (cam.IsRunning)
+            {
+                cam.Stop();
+            }
+
+
+        }
     }
 }

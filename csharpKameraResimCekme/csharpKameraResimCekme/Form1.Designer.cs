@@ -37,6 +37,9 @@ namespace csharpKameraResimCekme
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btn_cek = new System.Windows.Forms.Button();
+            this.btn_ok = new System.Windows.Forms.Button();
+            this.btn_ac = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +49,7 @@ namespace csharpKameraResimCekme
             this.pictureBox1.Location = new System.Drawing.Point(23, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(170, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -54,6 +58,7 @@ namespace csharpKameraResimCekme
             this.pictureBox2.Location = new System.Drawing.Point(271, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(170, 160);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -105,11 +110,44 @@ namespace csharpKameraResimCekme
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 3;
             // 
+            // btn_cek
+            // 
+            this.btn_cek.Location = new System.Drawing.Point(453, 304);
+            this.btn_cek.Name = "btn_cek";
+            this.btn_cek.Size = new System.Drawing.Size(131, 58);
+            this.btn_cek.TabIndex = 4;
+            this.btn_cek.Text = "çek";
+            this.btn_cek.UseVisualStyleBackColor = true;
+            this.btn_cek.Click += new System.EventHandler(this.btn_cek_Click);
+            // 
+            // btn_ok
+            // 
+            this.btn_ok.Location = new System.Drawing.Point(201, 304);
+            this.btn_ok.Name = "btn_ok";
+            this.btn_ok.Size = new System.Drawing.Size(131, 58);
+            this.btn_ok.TabIndex = 4;
+            this.btn_ok.Text = "ok";
+            this.btn_ok.UseVisualStyleBackColor = true;
+            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
+            // 
+            // btn_ac
+            // 
+            this.btn_ac.Location = new System.Drawing.Point(638, 304);
+            this.btn_ac.Name = "btn_ac";
+            this.btn_ac.Size = new System.Drawing.Size(131, 58);
+            this.btn_ac.TabIndex = 4;
+            this.btn_ac.Text = "aç";
+            this.btn_ac.UseVisualStyleBackColor = true;
+            this.btn_ac.Click += new System.EventHandler(this.btn_ac_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_ok);
+            this.Controls.Add(this.btn_ac);
+            this.Controls.Add(this.btn_cek);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -137,6 +175,9 @@ namespace csharpKameraResimCekme
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btn_cek;
+        private System.Windows.Forms.Button btn_ok;
+        private System.Windows.Forms.Button btn_ac;
     }
 }
 
